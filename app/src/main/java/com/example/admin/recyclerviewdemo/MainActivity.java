@@ -65,6 +65,9 @@ public class MainActivity extends AppCompatActivity {
         toast.show();
     }
 
+    /**
+     * 在Fragment中使用时需要两个参数：(View view, int ViewId)
+     */
     public <T extends View> T findView(int ViewId) {
         return (T) findViewById(ViewId);
     }
