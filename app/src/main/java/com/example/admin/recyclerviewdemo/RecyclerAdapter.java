@@ -61,7 +61,7 @@ public abstract class RecyclerAdapter<T> extends RecyclerView.Adapter<RecycleHol
 
     @Override
     public int getItemCount() {
-        return mDatas.size();
+        return mDatas!=null ? mDatas.size():0;
     }
 
     public void setOnItemClickListener(OnItemClickListener onItemClickListener) {
