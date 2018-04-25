@@ -10,9 +10,9 @@ import android.view.ViewGroup;
 import java.util.List;
 
 /**
- * Created by youkai on 2017/12/21.
+ * Created by Administrator on 2017/12/21.
  *
- * @author You
+ * @author Administrator
  *         <p>
  *         万能的RecyclerView的Adapter
  */
