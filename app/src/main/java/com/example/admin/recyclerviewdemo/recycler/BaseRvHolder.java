@@ -3,6 +3,7 @@ package com.example.admin.recyclerviewdemo.recycler;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.graphics.Bitmap;
+import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
@@ -155,22 +156,22 @@ public class BaseRvHolder extends RecyclerView.ViewHolder {
         return this;
     }
 
-    public BaseRvHolder setText(int viewId, int text) {
+    public BaseRvHolder setText(int viewId, int resId) {
         TextView tv = getView(viewId);
-        tv.setText(text);
+        tv.setText(resId);
         return this;
     }
 
     public BaseRvHolder setTextColor(int viewId, int colorId) {
         TextView view = getView(viewId);
+        //view.setTextColor(context.getResources().getColor(colorId));
         view.setTextColor(ContextCompat.getColor(context, colorId));
         return this;
     }
 
-    public BaseRvHolder setTextColorRes(int viewId, int textColorRes) {
+    public BaseRvHolder setTextColor(int viewId, String colorValue) {
         TextView view = getView(viewId);
-        //view.setTextColor(context.getResources().getColor(textColorRes));
-        view.setTextColor(ContextCompat.getColor(context, textColorRes));
+        view.setTextColor(Color.parseColor(colorValue));
         return this;
     }
 
