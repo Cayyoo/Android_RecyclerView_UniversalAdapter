@@ -161,6 +161,10 @@ public abstract class BaseRvAdapter<T> extends RecyclerView.Adapter<BaseRvHolder
      * @param mList 请确保mList已初始化并填充数据。
      */
     public void refreshData(List<T> mList) {
+        if (mList == null || mList.isEmpty()) {
+            return;
+        }
+        
         if (null != list) {
             if (list.size() > 0) {
                 list.clear();
